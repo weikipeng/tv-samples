@@ -75,7 +75,7 @@ dependencies {
     androidTestImplementation 'com.google.android.material:material:' + rootProject.materialVersion
     androidTestImplementation 'androidx.recyclerview:recyclerview:' + rootProject.supportLibVersion
 
-    implementation 'androidx.leanback:leanback:' + rootProject.supportLibVersion
+//    implementation 'androidx.leanback:leanback:' + rootProject.supportLibVersion
     implementation 'androidx.appcompat:appcompat:' + rootProject.supportLibVersion
 
     implementation 'androidx.preference:preference:' + rootProject.supportLibVersion
