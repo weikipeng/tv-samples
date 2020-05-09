@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Creates a view for a media item row in a playlist

@@ -28,7 +28,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.app.Fragment;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.graphics.FitWidthBitmapDrawable;
 import androidx.leanback.media.PlaybackGlue;
 import androidx.leanback.media.PlaybackGlueHost;

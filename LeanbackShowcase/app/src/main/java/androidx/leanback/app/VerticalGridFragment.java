@@ -22,7 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.transition.TransitionHelper;
 import androidx.leanback.util.StateMachine.State;
 import androidx.leanback.widget.BrowseFrameLayout;

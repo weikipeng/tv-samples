@@ -28,7 +28,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.util.MathUtil;
 
 /**

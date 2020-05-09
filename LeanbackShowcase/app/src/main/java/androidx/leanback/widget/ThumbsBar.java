@@ -27,7 +27,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * @hide

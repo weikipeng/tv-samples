@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.pengjunwei.android.tool.P;
 
 import androidx.core.widget.TextViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * RowHeaderView is a header text view.

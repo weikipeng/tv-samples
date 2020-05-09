@@ -22,7 +22,7 @@ import android.text.InputType;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.util.List;
 

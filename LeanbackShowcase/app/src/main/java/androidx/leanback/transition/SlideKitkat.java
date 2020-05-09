@@ -33,7 +33,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.RequiresApi;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Slide distance toward/from a edge.

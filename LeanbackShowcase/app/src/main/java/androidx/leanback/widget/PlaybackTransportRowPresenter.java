@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.ControlBarPresenter.OnControlClickedListener;
 import androidx.leanback.widget.ControlBarPresenter.OnControlSelectedListener;
 

@@ -41,7 +41,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentManager.BackStackEntry;
 import android.app.FragmentTransaction;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.transition.TransitionHelper;
 import androidx.leanback.widget.DiffCallback;
 import androidx.leanback.widget.GuidanceStylist;

@@ -28,7 +28,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * A subclass of {@link BaseCardView} with an {@link ImageView} as its main region. The

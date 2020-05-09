@@ -21,7 +21,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Displays primary and secondary controls for a {@link PlaybackControlsRow}.

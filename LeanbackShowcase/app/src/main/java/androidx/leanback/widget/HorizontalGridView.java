@@ -28,7 +28,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**

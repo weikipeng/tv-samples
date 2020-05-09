@@ -29,7 +29,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.ColorInt;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**

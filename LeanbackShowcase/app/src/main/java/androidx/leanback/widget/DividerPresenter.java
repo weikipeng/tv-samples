@@ -20,7 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * DividerPresenter provides a default presentation for {@link DividerRow} in HeadersFragment.

@@ -47,7 +47,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.util.ArrayList;
 import java.util.List;

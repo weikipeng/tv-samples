@@ -25,7 +25,7 @@ import android.util.TypedValue;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.graphics.CompositeDrawable;
 import androidx.leanback.graphics.FitWidthBitmapDrawable;
 

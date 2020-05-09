@@ -35,7 +35,7 @@ import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Execute horizontal slide of 1/4 width and fade (to workaround bug 23718734)

@@ -26,7 +26,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * A fragment for displaying an error indication.

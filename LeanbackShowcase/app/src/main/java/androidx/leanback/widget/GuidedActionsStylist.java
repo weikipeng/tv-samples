@@ -51,7 +51,7 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.ContextCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.transition.TransitionEpicenterCallback;
 import androidx.leanback.transition.TransitionHelper;
 import androidx.leanback.transition.TransitionListener;

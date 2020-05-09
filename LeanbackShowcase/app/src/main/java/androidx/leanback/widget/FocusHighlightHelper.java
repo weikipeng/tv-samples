@@ -29,7 +29,7 @@ import android.view.animation.Interpolator;
 
 import com.pengjunwei.android.tool.P;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.app.HeadersFragment;
 import androidx.leanback.graphics.ColorOverlayDimmer;
 import androidx.recyclerview.widget.RecyclerView;
@@ -105,6 +105,11 @@ public class FocusHighlightHelper {
             float scale = 1f + mScaleDiff * level;
             mView.setScaleX(scale);
             mView.setScaleY(scale);
+
+            P.setEnable(true);
+            P.ee("mView==>",mView);
+            P.setEnable(false);
+
             if (mWrapper != null) {
                 mWrapper.setShadowFocusLevel(level);
             } else {

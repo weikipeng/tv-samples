@@ -5,7 +5,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.util.AttributeSet;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * A subclass of {@link SearchOrbView} that visualizes the state of an ongoing speech recognition.

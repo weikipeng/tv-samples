@@ -27,7 +27,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.FrameLayout;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**

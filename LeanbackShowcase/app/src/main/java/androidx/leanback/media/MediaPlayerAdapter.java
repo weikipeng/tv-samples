@@ -23,7 +23,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.view.SurfaceHolder;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.io.IOException;
 

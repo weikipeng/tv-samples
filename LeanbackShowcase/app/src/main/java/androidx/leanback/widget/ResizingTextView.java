@@ -22,7 +22,7 @@ import android.view.ActionMode;
 import android.widget.TextView;
 
 import androidx.core.widget.TextViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * <p>A {@link TextView} that adjusts text size automatically in response

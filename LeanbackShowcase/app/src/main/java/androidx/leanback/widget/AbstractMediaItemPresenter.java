@@ -28,7 +28,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import androidx.core.view.ViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.util.ArrayList;
 import java.util.List;

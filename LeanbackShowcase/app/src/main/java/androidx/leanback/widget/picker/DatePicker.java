@@ -23,7 +23,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.text.DateFormat;
 import java.text.ParseException;

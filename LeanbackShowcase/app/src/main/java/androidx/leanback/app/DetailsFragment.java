@@ -34,7 +34,7 @@ import androidx.annotation.CallSuper;
 import android.app.Fragment;
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.transition.TransitionHelper;
 import androidx.leanback.transition.TransitionListener;
 import androidx.leanback.util.StateMachine.Event;

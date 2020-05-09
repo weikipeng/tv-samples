@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.pengjunwei.android.tool.P;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * RowHeaderPresenter provides a default presentation for {@link HeaderItem} using a

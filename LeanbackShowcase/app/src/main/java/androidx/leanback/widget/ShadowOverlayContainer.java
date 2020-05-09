@@ -23,8 +23,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.annotation.ColorInt;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Provides an SDK version-independent wrapper to support shadows, color overlays, and rounded
@@ -325,5 +327,13 @@ public class ShadowOverlayContainer extends FrameLayout {
     @Override
     public boolean hasOverlappingRendering() {
         return false;
+    }
+
+    @Override
+    public void setScaleX(float scaleX) {
+        P.setEnable(true);
+        P.ee("scaleX==>",scaleX);
+        P.setEnable(false);
+        super.setScaleX(scaleX);
     }
 }

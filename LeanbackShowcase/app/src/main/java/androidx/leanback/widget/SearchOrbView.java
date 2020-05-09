@@ -33,7 +33,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * <p>A widget that draws a search affordance, represented by a round background and an icon.</p>

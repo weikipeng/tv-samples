@@ -21,7 +21,7 @@ import android.view.Gravity;
 import android.view.animation.AnimationUtils;
 
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Helper class to load Leanback specific transition.

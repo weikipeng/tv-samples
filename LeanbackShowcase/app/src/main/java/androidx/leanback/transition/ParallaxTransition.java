@@ -31,7 +31,7 @@ import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.Parallax;
 
 /**

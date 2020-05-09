@@ -14,7 +14,7 @@ import android.view.View;
 
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * This class is used by Slide and Explode to create an animator that goes from the start

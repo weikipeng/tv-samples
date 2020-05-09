@@ -25,7 +25,7 @@ import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.util.MathUtil;
 
 /**

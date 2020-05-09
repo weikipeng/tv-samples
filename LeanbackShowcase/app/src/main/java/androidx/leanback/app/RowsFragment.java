@@ -28,7 +28,7 @@ import android.view.animation.Interpolator;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.BaseOnItemViewClickedListener;
 import androidx.leanback.widget.BaseOnItemViewSelectedListener;
 import androidx.leanback.widget.HorizontalGridView;

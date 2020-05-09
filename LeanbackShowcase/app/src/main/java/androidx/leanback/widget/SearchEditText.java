@@ -19,7 +19,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 
 import androidx.core.widget.TextViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * EditText widget that monitors keyboard changes.

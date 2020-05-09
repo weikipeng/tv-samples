@@ -19,7 +19,7 @@ import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.view.View;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Helper class for applying a dim level to a View.  The ColorFilterDimmer

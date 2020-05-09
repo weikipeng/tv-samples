@@ -42,7 +42,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.BackgroundHelper;
 
 import java.lang.ref.WeakReference;

@@ -24,7 +24,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.IntRange;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

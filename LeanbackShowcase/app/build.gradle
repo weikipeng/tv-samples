@@ -76,10 +76,17 @@ dependencies {
     androidTestImplementation 'androidx.recyclerview:recyclerview:' + rootProject.supportLibVersion
 
 //    implementation 'androidx.leanback:leanback:' + rootProject.supportLibVersion
-    implementation 'androidx.appcompat:appcompat:' + rootProject.supportLibVersion
+    implementation('androidx.appcompat:appcompat:' + rootProject.supportLibVersion) {
+        exclude group: 'androidx.leanback:leanback'
+    }
+
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.media:media:1.0.0")
 
     implementation 'androidx.preference:preference:' + rootProject.supportLibVersion
-    implementation 'androidx.leanback:leanback-preference:' + rootProject.supportLibVersion
+    implementation('androidx.leanback:leanback-preference:' + rootProject.supportLibVersion) {
+        exclude group: 'androidx.leanback:leanback'
+    }
     implementation 'androidx.legacy:legacy-preference-v14:' + rootProject.supportLibVersion
 
     implementation "com.google.code.gson:gson:2.8.2"
@@ -100,3 +107,6 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:" + rootProject.daggerVersion
 }
 
+configurations.all {
+    exclude group: 'androidx.leanback', module: 'leanback'
+}

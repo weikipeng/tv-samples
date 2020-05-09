@@ -27,7 +27,7 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.ClassPresenterSelector;
 import androidx.leanback.widget.DividerPresenter;
 import androidx.leanback.widget.DividerRow;

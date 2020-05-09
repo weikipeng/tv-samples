@@ -41,7 +41,7 @@ import android.app.FragmentTransaction;
 
 import com.pengjunwei.android.tool.P;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.transition.TransitionHelper;
 import androidx.leanback.transition.TransitionListener;
 import androidx.leanback.util.StateMachine.Event;

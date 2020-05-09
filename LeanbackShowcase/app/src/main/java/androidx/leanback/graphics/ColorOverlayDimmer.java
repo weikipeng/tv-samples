@@ -20,7 +20,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Helper class for assigning a dim color to Paint. It holds the alpha value for

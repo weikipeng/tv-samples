@@ -30,7 +30,7 @@ import android.view.inputmethod.CompletionInfo;
 import android.widget.FrameLayout;
 
 import androidx.fragment.app.Fragment;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.widget.ObjectAdapter;
 import androidx.leanback.widget.ObjectAdapter.DataObserver;
 import androidx.leanback.widget.OnItemViewClickedListener;

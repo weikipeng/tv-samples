@@ -30,7 +30,7 @@ import android.view.View;
 
 import androidx.annotation.RestrictTo;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Replacement of SeekBar, has two bar heights and two thumb size when focused/not_focused.

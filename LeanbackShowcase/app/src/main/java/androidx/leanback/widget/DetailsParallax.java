@@ -16,7 +16,7 @@
 
 package androidx.leanback.widget;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.leanback.app.DetailsFragment;
 import androidx.leanback.app.DetailsSupportFragment;
 

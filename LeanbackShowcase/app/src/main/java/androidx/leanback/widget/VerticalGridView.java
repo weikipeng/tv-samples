@@ -22,7 +22,7 @@ import android.view.View;
 
 import com.pengjunwei.android.tool.P;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**

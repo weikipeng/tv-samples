@@ -42,7 +42,7 @@ import android.view.animation.DecelerateInterpolator;
 import androidx.annotation.ColorInt;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * A page indicator with dots.

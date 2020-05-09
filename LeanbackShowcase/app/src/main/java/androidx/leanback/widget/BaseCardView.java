@@ -31,7 +31,7 @@ import android.view.animation.Transformation;
 import android.widget.FrameLayout;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.util.ArrayList;
 

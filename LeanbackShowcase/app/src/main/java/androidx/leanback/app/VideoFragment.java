@@ -23,7 +23,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 /**
  * Subclass of {@link PlaybackFragment} that is responsible for providing a {@link SurfaceView}

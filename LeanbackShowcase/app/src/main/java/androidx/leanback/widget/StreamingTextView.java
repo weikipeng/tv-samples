@@ -34,7 +34,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.core.widget.TextViewCompat;
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 import java.util.List;
 import java.util.Random;

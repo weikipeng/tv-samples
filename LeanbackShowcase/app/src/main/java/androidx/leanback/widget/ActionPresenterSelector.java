@@ -20,7 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import androidx.leanback.R;
+import androidx.leanback.leanbackshowcase.R;
 
 class ActionPresenterSelector extends PresenterSelector {
 
