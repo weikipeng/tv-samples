@@ -20,6 +20,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.pengjunwei.android.tool.P;
+
 /**
  * A ViewGroup for managing focus behavior between overlapping views.
  */
@@ -125,6 +127,9 @@ public class BrowseFrameLayout extends FrameLayout {
 
     @Override
     public void requestChildFocus(View child, View focused) {
+//        P.setEnable(true);
+//        P.ee();
+//        P.setEnable(false);
         if (mOnChildFocusListener != null) {
             mOnChildFocusListener.onRequestChildFocus(child, focused);
         }

@@ -14,9 +14,12 @@
 package androidx.leanback.widget;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.ActionMode;
 import android.widget.TextView;
+
+import com.pengjunwei.android.tool.P;
 
 import androidx.core.widget.TextViewCompat;
 import androidx.leanback.R;
@@ -48,4 +51,11 @@ public final class RowHeaderView extends TextView {
                 .wrapCustomSelectionActionModeCallback(this, actionModeCallback));
     }
 
+//    @Override
+//    public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
+//        P.setEnable(true);
+//        P.eea();
+//        P.setEnable(false);
+//        return super.requestFocus(direction, previouslyFocusedRect);
+//    }
 }

@@ -27,6 +27,8 @@ import android.view.ViewParent;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.leanback.R;
 import androidx.leanback.app.HeadersFragment;
 import androidx.leanback.graphics.ColorOverlayDimmer;
@@ -308,6 +310,9 @@ public class FocusHighlightHelper {
 
             @Override
             void setFocusLevel(float level) {
+                P.setEnable(true);
+                P.ee("level==>",level);
+                P.setEnable(false);
                 Presenter presenter = mViewHolder.getPresenter();
                 if (presenter instanceof RowHeaderPresenter) {
                     ((RowHeaderPresenter) presenter).setSelectLevel(

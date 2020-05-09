@@ -15,8 +15,12 @@ package androidx.leanback.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.View;
+
+import com.pengjunwei.android.tool.P;
 
 import androidx.leanback.R;
 import androidx.recyclerview.widget.RecyclerView;
@@ -89,4 +93,29 @@ public class VerticalGridView extends BaseGridView {
         mLayoutManager.setRowHeight(width);
         requestLayout();
     }
+//
+//    @Override
+//    public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
+//        P.setEnable(true);
+//        P.ee();
+//        P.setEnable(false);
+//        return super.requestFocus(direction, previouslyFocusedRect);
+//    }
+//
+//    @Override
+//    public void requestChildFocus(View child, View focused) {
+//        P.setEnable(true);
+//        P.ee();
+//        P.setEnable(false);
+//        super.requestChildFocus(child, focused);
+//    }
+//
+//    @Override
+//    public boolean onRequestFocusInDescendants(int direction, Rect previouslyFocusedRect) {
+//        P.setEnable(true);
+//        P.ee();
+//        P.setEnable(false);
+//
+//        return super.onRequestFocusInDescendants(direction, previouslyFocusedRect);
+//    }
 }

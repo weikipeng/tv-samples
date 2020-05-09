@@ -22,6 +22,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.annotation.RestrictTo;
 import androidx.leanback.R;
 
@@ -33,13 +35,14 @@ import androidx.leanback.R;
  */
 public class RowHeaderPresenter extends Presenter {
 
-    private final int mLayoutResourceId;
-    private final Paint mFontMeasurePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private boolean mNullItemVisibilityGone;
+    private final int     mLayoutResourceId;
+    private final Paint   mFontMeasurePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private       boolean mNullItemVisibilityGone;
     private final boolean mAnimateSelect;
 
     /**
      * Creates default RowHeaderPresenter using a title view and a description view.
+     *
      * @see ViewHolder#RowHeaderPresenter.ViewHolder(View)
      */
     public RowHeaderPresenter() {
@@ -81,25 +84,27 @@ public class RowHeaderPresenter extends Presenter {
      * A ViewHolder for the RowHeaderPresenter.
      */
     public static class ViewHolder extends Presenter.ViewHolder {
-        float mSelectLevel;
-        int mOriginalTextColor;
-        float mUnselectAlpha;
+        float         mSelectLevel;
+        int           mOriginalTextColor;
+        float         mUnselectAlpha;
         RowHeaderView mTitleView;
-        TextView mDescriptionView;
+        TextView      mDescriptionView;
 
         /**
          * Creating a new ViewHolder that supports title and description.
+         *
          * @param view Root of Views.
          */
         public ViewHolder(View view) {
             super(view);
-            mTitleView = (RowHeaderView)view.findViewById(R.id.row_header);
-            mDescriptionView = (TextView)view.findViewById(R.id.row_header_description);
+            mTitleView = (RowHeaderView) view.findViewById(R.id.row_header);
+            mDescriptionView = (TextView) view.findViewById(R.id.row_header_description);
             initColors();
         }
 
         /**
          * Uses a single {@link RowHeaderView} for creating a new ViewHolder.
+         *
          * @param view The single RowHeaderView.
          * @hide
          */
@@ -139,7 +144,7 @@ public class RowHeaderPresenter extends Presenter {
     @Override
     public void onBindViewHolder(Presenter.ViewHolder viewHolder, Object item) {
         HeaderItem headerItem = item == null ? null : ((Row) item).getHeaderItem();
-        ViewHolder vh = (ViewHolder)viewHolder;
+        ViewHolder vh         = (ViewHolder) viewHolder;
         if (headerItem == null) {
             if (vh.mTitleView != null) {
                 vh.mTitleView.setText(null);
@@ -171,7 +176,7 @@ public class RowHeaderPresenter extends Presenter {
 
     @Override
     public void onUnbindViewHolder(Presenter.ViewHolder viewHolder) {
-        ViewHolder vh = (ViewHolder)viewHolder;
+        ViewHolder vh = (ViewHolder) viewHolder;
         if (vh.mTitleView != null) {
             vh.mTitleView.setText(null);
         }
@@ -189,6 +194,10 @@ public class RowHeaderPresenter extends Presenter {
      */
     public final void setSelectLevel(ViewHolder holder, float selectLevel) {
         holder.mSelectLevel = selectLevel;
+//        P.setEnable(true);
+//        P.ee("holder.view==>", holder.view, "\tlevel==>", holder.mSelectLevel);
+//        P.setEnable(false);
+
         onSelectLevelChanged(holder);
     }
 
@@ -197,6 +206,10 @@ public class RowHeaderPresenter extends Presenter {
      */
     protected void onSelectLevelChanged(ViewHolder holder) {
         if (mAnimateSelect) {
+            P.setEnable(true);
+            P.ee("holder.view==>", holder.view, "\tlevel==>", holder.mSelectLevel);
+            P.line();
+            P.setEnable(false);
             holder.view.setAlpha(holder.mUnselectAlpha + holder.mSelectLevel
                     * (1f - holder.mUnselectAlpha));
         }
@@ -217,6 +230,10 @@ public class RowHeaderPresenter extends Presenter {
     @SuppressWarnings("ReferenceEquality")
     protected static float getFontDescent(TextView textView, Paint fontMeasurePaint) {
         if (fontMeasurePaint.getTextSize() != textView.getTextSize()) {
+            P.setEnable(true);
+            P.ee(" textView.getTextSize()==>", textView.getTextSize());
+            P.setEnable(false);
+
             fontMeasurePaint.setTextSize(textView.getTextSize());
         }
         if (fontMeasurePaint.getTypeface() != textView.getTypeface()) {
