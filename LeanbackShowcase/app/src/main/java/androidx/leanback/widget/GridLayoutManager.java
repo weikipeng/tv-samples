@@ -37,6 +37,8 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.CircularIntArray;
 import androidx.core.os.TraceCompat;
@@ -234,6 +236,11 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
             }
             if (hasFocus()) {
                 mFlag |= PF_IN_SELECTION;
+
+                P.setEnable(true);
+                P.ee("targetView.requestFocus()");
+                P.setEnable(false);
+
                 targetView.requestFocus();
                 mFlag &= ~PF_IN_SELECTION;
             }
@@ -336,6 +343,11 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
             }
             if (newSelected != null && hasFocus()) {
                 mFlag |= PF_IN_SELECTION;
+
+                P.setEnable(true);
+                P.ee("newSelected.requestFocus();");
+                P.setEnable(false);
+
                 newSelected.requestFocus();
                 mFlag &= ~PF_IN_SELECTION;
             }
@@ -992,11 +1004,19 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
                 mChildSelectedListener.onChildSelected(mBaseGridView, view, mFocusPosition,
                         vh == null? NO_ID: vh.getItemId());
             }
+            P.setEnable(true);
+            P.ee("--00--");
+            P.setEnable(false);
             fireOnChildViewHolderSelected(mBaseGridView, vh, mFocusPosition, mSubFocusPosition);
         } else {
             if (mChildSelectedListener != null) {
                 mChildSelectedListener.onChildSelected(mBaseGridView, null, NO_POSITION, NO_ID);
             }
+
+            P.setEnable(true);
+            P.ee("--11--");
+            P.setEnable(false);
+
             fireOnChildViewHolderSelected(mBaseGridView, null, NO_POSITION, 0);
         }
         if (TRACE) TraceCompat.endSection();
@@ -2046,6 +2066,10 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
             scrollToView(focusView, false, extraDelta, extraDeltaSecondary);
         }
         if (focusView != null && hadFocus && !focusView.hasFocus()) {
+            P.setEnable(true);
+            P.ee("focusView.requestFocus();");
+            P.setEnable(false);
+
             focusView.requestFocus();
         } else if (!hadFocus && !mBaseGridView.hasFocus()) {
             if (focusView != null && focusView.hasFocusable()) {
@@ -2968,6 +2992,10 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
         if (!view.hasFocus() && mBaseGridView.hasFocus()) {
             // transfer focus to the child if it does not have focus yet (e.g. triggered
             // by setSelection())
+            P.setEnable(true);
+            P.ee("view.requestFocus();      00      00");
+            P.setEnable(false);
+
             view.requestFocus();
         }
         if ((mFlag & PF_SCROLL_ENABLED) == 0 && smooth) {
@@ -3162,6 +3190,10 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
                     break;
                 }
                 if (view.getVisibility() == View.VISIBLE && view.hasFocusable()) {
+                    P.setEnable(true);
+                    P.ee("view.requestFocus();      00      11");
+                    P.setEnable(false);
+
                     view.requestFocus();
                     break;
                 }
@@ -3810,6 +3842,12 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
             if (preventScroll) {
                 if (hasFocus()) {
                     mFlag |= PF_IN_SELECTION;
+
+                    P.setEnable(true);
+                    P.ee("newSelected.requestFocus();      11      11      ---");
+                    P.setEnable(false);
+
+
                     newSelected.requestFocus();
                     mFlag &= ~PF_IN_SELECTION;
                 }

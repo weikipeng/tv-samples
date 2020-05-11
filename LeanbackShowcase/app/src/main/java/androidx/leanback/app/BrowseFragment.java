@@ -250,6 +250,13 @@ public class BrowseFragment extends BaseFragment {
         }
 
         void post(int position, int type, boolean smooth) {
+            P.setEnable(true);
+            P.ee("position==>", position
+                    , "\ttype==>", type
+                    , "\tmType==>", mType
+                    , "\tsmooth==>", smooth
+            );
+            P.setEnable(false);
             // Posting the set selection, rather than calling it immediately, prevents an issue
             // with adapter changes.  Example: a row is added before the current selected row;
             // first the fast lane view updates its selection, then the rows fragment has that
@@ -600,6 +607,9 @@ public class BrowseFragment extends BaseFragment {
         if (!mCanShowHeaders) {
             // when header is disabled, we can decide to use RowsFragment even no data.
         } else if (adapter == null || adapter.size() == 0) {
+            P.setEnable(true);
+            P.ee("adapter == null || adapter.size() == 0");
+            P.setEnable(false);
             return false;
         } else {
             if (position < 0) {
@@ -618,6 +628,10 @@ public class BrowseFragment extends BaseFragment {
         boolean swap;
 
         if (mMainFragment == null) {
+            P.setEnable(true);
+            P.ee("mMainFragment == null     swap = true;");
+            P.setEnable(false);
+
             swap = true;
         } else {
             if (oldIsPageRow) {
@@ -626,17 +640,38 @@ public class BrowseFragment extends BaseFragment {
                         // fragment is restored, page row object not yet set, so just set the
                         // mPageRow object and there is no need to replace the fragment
                         swap = false;
+
+                        P.setEnable(true);
+                        P.ee("swap = false;");
+                        P.setEnable(false);
+
                     } else {
                         // swap if page row object changes
                         swap = oldPageRow != mPageRow;
+
+                        P.setEnable(true);
+                        P.ee("swap = oldPageRow != mPageRow     ==>", swap);
+                        P.setEnable(false);
                     }
                 } else {
                     swap = true;
+
+                    P.setEnable(true);
+                    P.ee("swap = true;");
+                    P.setEnable(false);
                 }
             } else {
                 swap = mIsPageRow;
+
+                P.setEnable(true);
+                P.ee("swap = mIsPageRow;        ==>", swap);
+                P.setEnable(false);
             }
         }
+
+        P.setEnable(true);
+        P.ee("result swap==>", swap);
+        P.setEnable(false);
 
         if (swap) {
             mMainFragment = mMainFragmentAdapterRegistry.createFragment(item);
@@ -1132,19 +1167,19 @@ public class BrowseFragment extends BaseFragment {
                     // if headers is running transition,  focus stays
                     if (mCanShowHeaders && isInHeadersTransition()) {
                         P.setEnable(true);
-                        P.ee("mCanShowHeaders && isInHeadersTransition()        return focused;==>",focused);
+                        P.ee("mCanShowHeaders && isInHeadersTransition()        return focused;==>", focused);
                         P.setEnable(false);
                         return focused;
                     }
 
-                    if (DEBUG){
+                    if (DEBUG) {
                         Log.v(TAG, "onFocusSearch focused " + focused + " + direction " + direction);
                     }
 
                     if (getTitleView() != null && focused != getTitleView()
                             && direction == View.FOCUS_UP) {
                         P.setEnable(true);
-                        P.ee("return getTitleView();==>",getTitleView());
+                        P.ee("return getTitleView();==>", getTitleView());
                         P.setEnable(false);
 
                         return getTitleView();
@@ -1268,7 +1303,7 @@ public class BrowseFragment extends BaseFragment {
                         P.setEnable(false);
                         return;
                     }
-                    if (!mCanShowHeaders || isInHeadersTransition()){
+                    if (!mCanShowHeaders || isInHeadersTransition()) {
                         P.setEnable(true);
                         P.ee("!mCanShowHeaders || isInHeadersTransition()");
                         P.setEnable(false);
@@ -1388,7 +1423,20 @@ public class BrowseFragment extends BaseFragment {
             }
 
             ft.commit();
+
+            P.setEnable(true);
+            P.ee("getChildFragmentManager().findFragmentById(R.id.scale_frame) == null");
+            P.ee("mHeadersFragment==>", mHeadersFragment);
+            P.ee("mMainFragment==>", mMainFragment);
+            P.line();
+            P.setEnable(false);
         } else {
+
+            P.setEnable(true);
+            P.ee("getChildFragmentManager().findFragmentById(R.id.scale_frame) not ---  --- null");
+            P.setEnable(false);
+
+
             mHeadersFragment = (HeadersFragment) getChildFragmentManager()
                     .findFragmentById(R.id.browse_headers_dock);
             mMainFragment = getChildFragmentManager().findFragmentById(R.id.scale_frame);
@@ -1450,6 +1498,9 @@ public class BrowseFragment extends BaseFragment {
             }
         });
 
+        P.setEnable(true);
+        P.ee("initView finish");
+        P.setEnable(false);
         return root;
     }
 
@@ -1471,6 +1522,9 @@ public class BrowseFragment extends BaseFragment {
                     if (!mShowingHeaders && mMainFragment != null) {
                         View mainFragmentView = mMainFragment.getView();
                         if (mainFragmentView != null && !mainFragmentView.hasFocus()) {
+                            P.setEnable(true);
+                            P.ee("mainFragmentView.requestFocus()");
+                            P.setEnable(false);
                             mainFragmentView.requestFocus();
                         }
                     }
@@ -1480,6 +1534,10 @@ public class BrowseFragment extends BaseFragment {
                     if (mShowingHeaders) {
                         VerticalGridView headerGridView = mHeadersFragment.getVerticalGridView();
                         if (headerGridView != null && !headerGridView.hasFocus()) {
+                            P.setEnable(true);
+                            P.ee("headerGridView.requestFocus()");
+                            P.setEnable(false);
+
                             headerGridView.requestFocus();
                         }
                     }
@@ -1614,6 +1672,11 @@ public class BrowseFragment extends BaseFragment {
                         return;
                     }
                     startHeadersTransitionInternal(false);
+
+                    P.setEnable(true);
+                    P.ee("mMainFragment.getView().requestFocus()");
+                    P.setEnable(false);
+
                     mMainFragment.getView().requestFocus();
                 }
             };
@@ -1650,6 +1713,10 @@ public class BrowseFragment extends BaseFragment {
                         Log.v(TAG, "header selected position " + position);
                     // Layout of Headers Fragment in hidden state may triggers the onRowSelected and
                     // reset to 0. Skip in that case.
+
+                    P.setEnable(true);
+                    P.ee("position==>",position);
+                    P.setEnable(false);
                     if (mShowingHeaders) {
                         onRowSelected(position);
                     }
@@ -1657,6 +1724,9 @@ public class BrowseFragment extends BaseFragment {
             };
 
     void onRowSelected(int position) {
+        P.setEnable(true);
+        P.ee("position==>",position);
+        P.setEnable(false);
         // even position is same, it could be data changed, always post selection runnable
         // to possibly swap main fragment.
         mSetSelectionRunnable.post(
@@ -1664,6 +1734,10 @@ public class BrowseFragment extends BaseFragment {
     }
 
     void setSelection(int position, boolean smooth) {
+        P.setEnable(true);
+        P.ee("position==>", position, "\tsmooth==>", smooth);
+        P.setEnable(false);
+
         if (position == NO_POSITION) {
             return;
         }
@@ -1693,10 +1767,25 @@ public class BrowseFragment extends BaseFragment {
     final void commitMainFragment() {
         FragmentManager fm              = getChildFragmentManager();
         Fragment        currentFragment = fm.findFragmentById(R.id.scale_frame);
+
+        P.setEnable(true);
+        P.ee("currentFragment==>", currentFragment
+                , "\tmMainFragment==>", mMainFragment
+        );
+        P.setEnable(false);
+
         if (currentFragment != mMainFragment) {
+            P.setEnable(true);
+            P.ee("currentFragment != mMainFragment do job");
+            P.setEnable(false);
+
             fm.beginTransaction()
                     .replace(R.id.scale_frame, mMainFragment).commit();
         }
+
+        P.setEnable(true);
+        P.line();
+        P.setEnable(false);
     }
 
     private final RecyclerView.OnScrollListener mWaitScrollFinishAndCommitMainFragment =
@@ -1714,9 +1803,15 @@ public class BrowseFragment extends BaseFragment {
             };
 
     private void swapToMainFragment() {
+        P.setEnable(true);
+        P.ee("mStopped==>", mStopped);
+        P.setEnable(false);
+
         if (mStopped) {
             return;
         }
+
+
         final VerticalGridView gridView = mHeadersFragment.getVerticalGridView();
         if (isShowingHeaders() && gridView != null
                 && gridView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
@@ -1726,6 +1821,10 @@ public class BrowseFragment extends BaseFragment {
                     .replace(R.id.scale_frame, new Fragment()).commit();
             gridView.removeOnScrollListener(mWaitScrollFinishAndCommitMainFragment);
             gridView.addOnScrollListener(mWaitScrollFinishAndCommitMainFragment);
+
+            P.setEnable(true);
+            P.line("scrolling HeadersFragment  getChildFragmentManager replace empty fragment");
+            P.setEnable(false);
         } else {
             // Otherwise swap immediately
             commitMainFragment();
@@ -1800,9 +1899,16 @@ public class BrowseFragment extends BaseFragment {
 
         if (mCanShowHeaders && mShowingHeaders && mHeadersFragment != null
                 && mHeadersFragment.getView() != null) {
+            P.setEnable(true);
+            P.ee("mHeadersFragment.getView().requestFocus();");
+            P.setEnable(false);
+
             mHeadersFragment.getView().requestFocus();
         } else if ((!mCanShowHeaders || !mShowingHeaders) && mMainFragment != null
                 && mMainFragment.getView() != null) {
+            P.setEnable(true);
+            P.ee("mMainFragment.getView().requestFocus();");
+            P.setEnable(false);
             mMainFragment.getView().requestFocus();
         }
 

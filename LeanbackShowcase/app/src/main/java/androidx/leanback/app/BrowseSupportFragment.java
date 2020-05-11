@@ -27,6 +27,8 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.ViewTreeObserver;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
@@ -1343,6 +1345,9 @@ public class BrowseSupportFragment extends BaseSupportFragment {
                     if (!mShowingHeaders && mMainFragment != null) {
                         View mainFragmentView = mMainFragment.getView();
                         if (mainFragmentView != null && !mainFragmentView.hasFocus()) {
+                            P.setEnable(true);
+                            P.ee("mainFragmentView.requestFocus()");
+                            P.setEnable(false);
                             mainFragmentView.requestFocus();
                         }
                     }

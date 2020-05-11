@@ -206,6 +206,10 @@ public class FocusHighlightHelper {
      */
     public static void setupBrowseItemFocusHighlight(ItemBridgeAdapter adapter, int zoomIndex,
             boolean useDimmer) {
+        P.setEnable(true);
+        P.ee("FocusHighlightHelper.setupBrowseItemFocusHighlight(---)");
+        P.setEnable(false);
+
         adapter.setFocusHighlight(new BrowseItemFocusHighlight(zoomIndex, useDimmer));
     }
 
@@ -251,6 +255,9 @@ public class FocusHighlightHelper {
      * @see HeadersFragment#getBridgeAdapter()
      */
     public static void setupHeaderItemFocusHighlight(ItemBridgeAdapter adapter) {
+        P.setEnable(true);
+        P.ee();
+        P.setEnable(false);
         setupHeaderItemFocusHighlight(adapter, true);
     }
 

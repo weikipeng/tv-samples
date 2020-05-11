@@ -28,6 +28,8 @@ import android.view.View.OnLayoutChangeListener;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.pengjunwei.android.tool.P;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.leanback.leanbackshowcase.R;
@@ -125,9 +127,16 @@ public class HeadersFragment extends BaseRowFragment {
         if (mOnHeaderViewSelectedListener != null) {
             if (viewHolder != null && position >= 0) {
                 ItemBridgeAdapter.ViewHolder vh = (ItemBridgeAdapter.ViewHolder) viewHolder;
+                P.setEnable(true);
+                P.ee("viewHolder != null && position >= 0       onHeaderSelected==>");
+                P.setEnable(false);
                 mOnHeaderViewSelectedListener.onHeaderSelected(
                         (RowHeaderPresenter.ViewHolder) vh.getViewHolder(), (Row) vh.getItem());
             } else {
+                P.setEnable(true);
+                P.ee("not           viewHolder != null && position >= 0       onHeaderSelected==> null null");
+                P.setEnable(false);
+
                 mOnHeaderViewSelectedListener.onHeaderSelected(null, null);
             }
         }
@@ -283,6 +292,10 @@ public class HeadersFragment extends BaseRowFragment {
             if (listView != null) {
                 listView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
                 if (listView.hasFocus()) {
+                    P.setEnable(true);
+                    P.ee("requestFocus  ==>",listView);
+                    P.setEnable(false);
+
                     listView.requestFocus();
                 }
             }
@@ -296,6 +309,10 @@ public class HeadersFragment extends BaseRowFragment {
             if (listView != null) {
                 listView.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
                 if (listView.hasFocus()) {
+                    P.setEnable(true);
+                    P.ee("requestFocus  ==>",listView);
+                    P.setEnable(false);
+
                     listView.requestFocus();
                 }
             }

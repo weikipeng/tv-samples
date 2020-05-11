@@ -76,6 +76,7 @@ dependencies {
     androidTestImplementation 'androidx.recyclerview:recyclerview:' + rootProject.supportLibVersion
 
 //    implementation 'androidx.leanback:leanback:' + rootProject.supportLibVersion
+    implementation 'com.facebook.stetho:stetho:1.5.1'
     implementation('androidx.appcompat:appcompat:' + rootProject.supportLibVersion) {
         exclude group: 'androidx.leanback:leanback'
     }

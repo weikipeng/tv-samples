@@ -19,6 +19,8 @@ package androidx.leanback.leanbackshowcase.app.room.controller.app;
 import android.app.Activity;
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 import androidx.leanback.leanbackshowcase.app.room.di.androidinject.AppInjector;
 
 import dagger.android.AndroidInjector;
@@ -48,6 +50,8 @@ public class SampleApplication extends Application implements HasActivityInjecto
         sApp = this;
 
         AppInjector.init(this);
+
+        Stetho.initializeWithDefaults(this);
 
         // If we want to process the dependency injection manually, we have to add this line.
         // DaggerAppComponent.builder().application(this).build().inject(this);
